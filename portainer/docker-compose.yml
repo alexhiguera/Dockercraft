@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - "${PORTAINER_HTTP_PORT:-9000}:9000"
+      - "${PORTAINER_HTTPS_PORT:-9443}:9443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer-data:/data
+    restart: unless-stopped
+    networks:
+      - portainer-network
+
+volumes:
+  portainer-data:
+
+networks:
+  portainer-network:
+    driver: bridge
