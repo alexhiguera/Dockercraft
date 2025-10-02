@@ -1,0 +1,61 @@
+# Archivos de entorno
+.env
+*.env
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Datos y volúmenes
+data/
+volumes/
+*-data/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+.next/
+.nuxt/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Docker
+.dockerignore
+
+# Certificados y claves
+*.pem
+*.key
+*.crt
+ssl/
+certificates/
+
+# Backups
+*.backup
+*.bak
+*.sql.gz
+backup/
+
+# Temporal
+tmp/
+temp/
+*.tmp
+
+# Sistema
+Thumbs.db
